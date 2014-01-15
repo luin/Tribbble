@@ -19,6 +19,18 @@
 		2F6B4CE018869DD9000D8591 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6B4CC818869DD9000D8591 /* UIKit.framework */; };
 		2F6B4CE818869DD9000D8591 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F6B4CE618869DD9000D8591 /* InfoPlist.strings */; };
 		2F6B4CEA18869DD9000D8591 /* TribbbleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6B4CE918869DD9000D8591 /* TribbbleTests.m */; };
+		2F898AD018869EE900E9E8F1 /* TRIShotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898ACF18869EE900E9E8F1 /* TRIShotsViewController.m */; };
+		2F898AD71886A32600E9E8F1 /* TRIShotsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898AD61886A32600E9E8F1 /* TRIShotsCollectionViewCell.m */; };
+		2F898ADB1886A4B500E9E8F1 /* TRIShotDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898ADA1886A4B500E9E8F1 /* TRIShotDetailViewController.m */; };
+		2F898AEA1886B1B900E9E8F1 /* debuts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F898AE51886B1B900E9E8F1 /* debuts@2x.png */; };
+		2F898AEB1886B1B900E9E8F1 /* everyone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F898AE61886B1B900E9E8F1 /* everyone@2x.png */; };
+		2F898AEC1886B1B900E9E8F1 /* feeds@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F898AE71886B1B900E9E8F1 /* feeds@2x.png */; };
+		2F898AED1886B1B900E9E8F1 /* popular@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F898AE81886B1B900E9E8F1 /* popular@2x.png */; };
+		2F898AEE1886B1B900E9E8F1 /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F898AE91886B1B900E9E8F1 /* setting@2x.png */; };
+		2F898B011886BF3200E9E8F1 /* TRISettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898B001886BF3200E9E8F1 /* TRISettingTableViewController.m */; };
+		2F898B041886C2B400E9E8F1 /* TRIFeedsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898B031886C2B400E9E8F1 /* TRIFeedsTableViewController.m */; };
+		2F898B071886C3CC00E9E8F1 /* TRIShotsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898B061886C3CC00E9E8F1 /* TRIShotsTableViewCell.m */; };
+		7C6E7550825C47C88BFD08C2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA7808F72FF456ABDAF6B8A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +60,25 @@
 		2F6B4CE518869DD9000D8591 /* TribbbleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TribbbleTests-Info.plist"; sourceTree = "<group>"; };
 		2F6B4CE718869DD9000D8591 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F6B4CE918869DD9000D8591 /* TribbbleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TribbbleTests.m; sourceTree = "<group>"; };
+		2F898ACE18869EE900E9E8F1 /* TRIShotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRIShotsViewController.h; path = Controllers/TRIShotsViewController.h; sourceTree = "<group>"; };
+		2F898ACF18869EE900E9E8F1 /* TRIShotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRIShotsViewController.m; path = Controllers/TRIShotsViewController.m; sourceTree = "<group>"; };
+		2F898AD51886A32600E9E8F1 /* TRIShotsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRIShotsCollectionViewCell.h; path = Views/TRIShotsCollectionViewCell.h; sourceTree = "<group>"; };
+		2F898AD61886A32600E9E8F1 /* TRIShotsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRIShotsCollectionViewCell.m; path = Views/TRIShotsCollectionViewCell.m; sourceTree = "<group>"; };
+		2F898AD91886A4B500E9E8F1 /* TRIShotDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRIShotDetailViewController.h; path = Controllers/TRIShotDetailViewController.h; sourceTree = "<group>"; };
+		2F898ADA1886A4B500E9E8F1 /* TRIShotDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRIShotDetailViewController.m; path = Controllers/TRIShotDetailViewController.m; sourceTree = "<group>"; };
+		2F898AE51886B1B900E9E8F1 /* debuts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "debuts@2x.png"; sourceTree = "<group>"; };
+		2F898AE61886B1B900E9E8F1 /* everyone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "everyone@2x.png"; sourceTree = "<group>"; };
+		2F898AE71886B1B900E9E8F1 /* feeds@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feeds@2x.png"; sourceTree = "<group>"; };
+		2F898AE81886B1B900E9E8F1 /* popular@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popular@2x.png"; sourceTree = "<group>"; };
+		2F898AE91886B1B900E9E8F1 /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
+		2F898AFF1886BF3200E9E8F1 /* TRISettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRISettingTableViewController.h; path = Controllers/TRISettingTableViewController.h; sourceTree = "<group>"; };
+		2F898B001886BF3200E9E8F1 /* TRISettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRISettingTableViewController.m; path = Controllers/TRISettingTableViewController.m; sourceTree = "<group>"; };
+		2F898B021886C2B400E9E8F1 /* TRIFeedsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRIFeedsTableViewController.h; path = Controllers/TRIFeedsTableViewController.h; sourceTree = "<group>"; };
+		2F898B031886C2B400E9E8F1 /* TRIFeedsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRIFeedsTableViewController.m; path = Controllers/TRIFeedsTableViewController.m; sourceTree = "<group>"; };
+		2F898B051886C3CC00E9E8F1 /* TRIShotsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRIShotsTableViewCell.h; path = Views/TRIShotsTableViewCell.h; sourceTree = "<group>"; };
+		2F898B061886C3CC00E9E8F1 /* TRIShotsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRIShotsTableViewCell.m; path = Views/TRIShotsTableViewCell.m; sourceTree = "<group>"; };
+		5020FE1AF71743C6A053A494 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		8CA7808F72FF456ABDAF6B8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +89,7 @@
 				2F6B4CC718869DD9000D8591 /* CoreGraphics.framework in Frameworks */,
 				2F6B4CC918869DD9000D8591 /* UIKit.framework in Frameworks */,
 				2F6B4CC518869DD9000D8591 /* Foundation.framework in Frameworks */,
+				7C6E7550825C47C88BFD08C2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +113,7 @@
 				2F6B4CE318869DD9000D8591 /* TribbbleTests */,
 				2F6B4CC318869DD9000D8591 /* Frameworks */,
 				2F6B4CC218869DD9000D8591 /* Products */,
+				5020FE1AF71743C6A053A494 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +133,7 @@
 				2F6B4CC618869DD9000D8591 /* CoreGraphics.framework */,
 				2F6B4CC818869DD9000D8591 /* UIKit.framework */,
 				2F6B4CDD18869DD9000D8591 /* XCTest.framework */,
+				8CA7808F72FF456ABDAF6B8A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +141,9 @@
 		2F6B4CCA18869DD9000D8591 /* Tribbble */ = {
 			isa = PBXGroup;
 			children = (
+				2F898ADE1886AE0F00E9E8F1 /* Images */,
+				2F898AD81886A32C00E9E8F1 /* Views */,
+				2F898AD118869EF700E9E8F1 /* Controllers */,
 				2F6B4CD318869DD9000D8591 /* TRIAppDelegate.h */,
 				2F6B4CD418869DD9000D8591 /* TRIAppDelegate.m */,
 				2F6B4CD618869DD9000D8591 /* Images.xcassets */,
@@ -144,6 +181,44 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2F898AD118869EF700E9E8F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F898ACE18869EE900E9E8F1 /* TRIShotsViewController.h */,
+				2F898ACF18869EE900E9E8F1 /* TRIShotsViewController.m */,
+				2F898B021886C2B400E9E8F1 /* TRIFeedsTableViewController.h */,
+				2F898B031886C2B400E9E8F1 /* TRIFeedsTableViewController.m */,
+				2F898AD91886A4B500E9E8F1 /* TRIShotDetailViewController.h */,
+				2F898ADA1886A4B500E9E8F1 /* TRIShotDetailViewController.m */,
+				2F898AFF1886BF3200E9E8F1 /* TRISettingTableViewController.h */,
+				2F898B001886BF3200E9E8F1 /* TRISettingTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2F898AD81886A32C00E9E8F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F898AD51886A32600E9E8F1 /* TRIShotsCollectionViewCell.h */,
+				2F898AD61886A32600E9E8F1 /* TRIShotsCollectionViewCell.m */,
+				2F898B051886C3CC00E9E8F1 /* TRIShotsTableViewCell.h */,
+				2F898B061886C3CC00E9E8F1 /* TRIShotsTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2F898ADE1886AE0F00E9E8F1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2F898AE51886B1B900E9E8F1 /* debuts@2x.png */,
+				2F898AE61886B1B900E9E8F1 /* everyone@2x.png */,
+				2F898AE71886B1B900E9E8F1 /* feeds@2x.png */,
+				2F898AE81886B1B900E9E8F1 /* popular@2x.png */,
+				2F898AE91886B1B900E9E8F1 /* setting@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F6B4CED18869DD9000D8591 /* Build configuration list for PBXNativeTarget "Tribbble" */;
 			buildPhases = (
+				101D9102DF184DC9AB22181D /* Check Pods Manifest.lock */,
 				2F6B4CBD18869DD9000D8591 /* Sources */,
 				2F6B4CBE18869DD9000D8591 /* Frameworks */,
 				2F6B4CBF18869DD9000D8591 /* Resources */,
+				A958974665894BFB857C4B0F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,7 +298,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6B4CCF18869DD9000D8591 /* InfoPlist.strings in Resources */,
+				2F898AEB1886B1B900E9E8F1 /* everyone@2x.png in Resources */,
+				2F898AEE1886B1B900E9E8F1 /* setting@2x.png in Resources */,
+				2F898AED1886B1B900E9E8F1 /* popular@2x.png in Resources */,
 				2F6B4CD718869DD9000D8591 /* Images.xcassets in Resources */,
+				2F898AEA1886B1B900E9E8F1 /* debuts@2x.png in Resources */,
+				2F898AEC1886B1B900E9E8F1 /* feeds@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,13 +317,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		101D9102DF184DC9AB22181D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A958974665894BFB857C4B0F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F6B4CBD18869DD9000D8591 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F898AD71886A32600E9E8F1 /* TRIShotsCollectionViewCell.m in Sources */,
+				2F898AD018869EE900E9E8F1 /* TRIShotsViewController.m in Sources */,
+				2F898ADB1886A4B500E9E8F1 /* TRIShotDetailViewController.m in Sources */,
 				2F6B4CD518869DD9000D8591 /* TRIAppDelegate.m in Sources */,
+				2F898B041886C2B400E9E8F1 /* TRIFeedsTableViewController.m in Sources */,
+				2F898B071886C3CC00E9E8F1 /* TRIShotsTableViewCell.m in Sources */,
 				2F6B4CD118869DD9000D8591 /* main.m in Sources */,
+				2F898B011886BF3200E9E8F1 /* TRISettingTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +478,7 @@
 		};
 		2F6B4CEE18869DD9000D8591 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5020FE1AF71743C6A053A494 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -370,6 +492,7 @@
 		};
 		2F6B4CEF18869DD9000D8591 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5020FE1AF71743C6A053A494 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -442,6 +565,7 @@
 				2F6B4CEF18869DD9000D8591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F6B4CF018869DD9000D8591 /* Build configuration list for PBXNativeTarget "TribbbleTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +574,7 @@
 				2F6B4CF218869DD9000D8591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
