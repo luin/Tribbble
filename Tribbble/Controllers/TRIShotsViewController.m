@@ -53,6 +53,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:[NSString stringWithFormat:@"http://api.dribbble.com/shots/%@?per_page=30&page=%d", [self.title lowercaseString], (int)self.currentPage] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *dict = responseObject;
+        NSLog(@"%@", [dict objectForKey:@"shots"]);
         [self.shots addObjectsFromArray:[dict objectForKey:@"shots"]];
         [self.shotsView reloadData];
         self.isLoading = false;
@@ -140,6 +141,7 @@
                                                                       cellForItemAtIndexPath:indexPath];
 
     vc.placeholderImage = cell.shotImage.image;
+    vc.placeholderTitle = [[self.shots objectAtIndex:indexPath.row] objectForKey:@"title"];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

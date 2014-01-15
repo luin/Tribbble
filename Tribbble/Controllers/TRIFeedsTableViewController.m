@@ -112,6 +112,8 @@
                                                                       cellForRowAtIndexPath:indexPath];
     
     vc.placeholderImage = cell.shotImage.image;
+    vc.placeholderTitle = [[self.shots objectAtIndex:indexPath.row] objectForKey:@"title"];
+    
     [self.navigationController pushViewController:vc animated:YES];
 }
 

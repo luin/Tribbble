@@ -13,6 +13,7 @@
 @interface TRIShotDetailViewController ()
 @property (nonatomic, retain) UIImageView *shotView;
 @property (nonatomic, retain) UIImageView *shotPlaceholderView;
+@property (nonatomic, retain) UIScrollView *scrollView;
 @end
 
 @implementation TRIShotDetailViewController
@@ -30,7 +31,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Loading...";
+    self.title = self.placeholderTitle;
     [self prepareView];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     NSString *url = [NSString stringWithFormat:@"http://api.dribbble.com/shots/%@", self.shotId];
@@ -52,9 +53,12 @@
 
 - (void)prepareView
 {
-    self.shotView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, 320, 240)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.scrollView];
+
+    self.shotView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 240)];
     [self.shotView setImage: self.placeholderImage];
-    [self.view addSubview:self.shotView];
+    [self.scrollView addSubview:self.shotView];
 }
 
 - (void)didReceiveMemoryWarning
