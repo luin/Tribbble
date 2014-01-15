@@ -103,6 +103,18 @@
     return self.shots.count;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TRIShotDetailViewController *vc = [[TRIShotDetailViewController alloc] initWithNibName:nil bundle:nil];
+    vc.shotId = [[self.shots objectAtIndex:indexPath.row] objectForKey:@"id"];
+    
+    TRIShotsTableViewCell *cell = (TRIShotsTableViewCell *)[tableView
+                                                                      cellForRowAtIndexPath:indexPath];
+    
+    vc.placeholderImage = cell.shotImage.image;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TRIShotsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell"];

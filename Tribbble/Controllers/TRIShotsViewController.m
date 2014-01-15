@@ -141,7 +141,6 @@
 
     vc.placeholderImage = cell.shotImage.image;
     [self.navigationController pushViewController:vc animated:YES];
-    
 }
 
 
