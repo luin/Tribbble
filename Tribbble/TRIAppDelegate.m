@@ -32,6 +32,7 @@
                                                               title:@"setting"]
                                            ]];
     [tabBarController.view setTintColor:[UIColor colorWithRed:0.918 green:0.298 blue:0.537 alpha:1.0]];
+    [tabBarController setSelectedIndex:2];
     self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
