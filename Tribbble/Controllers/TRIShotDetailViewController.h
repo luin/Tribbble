@@ -12,4 +12,5 @@
 @property (nonatomic, retain) NSNumber *shotId;
 @property (nonatomic, retain) UIImage *placeholderImage;
 @property (nonatomic, retain) NSString *placeholderTitle;
+@property (nonatomic, retain) NSURL *imageURL;
 @end

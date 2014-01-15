@@ -141,6 +141,7 @@
                                                                       cellForItemAtIndexPath:indexPath];
 
     vc.placeholderImage = cell.shotImage.image;
+    vc.imageURL = [[self.shots objectAtIndex:indexPath.row] objectForKey:@"image_url"];
     vc.placeholderTitle = [[self.shots objectAtIndex:indexPath.row] objectForKey:@"title"];
     [self.navigationController pushViewController:vc animated:YES];
 }

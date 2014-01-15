@@ -34,16 +34,13 @@
     self.title = self.placeholderTitle;
     [self prepareView];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    NSString *url = [NSString stringWithFormat:@"http://api.dribbble.com/shots/%@", self.shotId];
+    NSString *url = [NSString stringWithFormat:@"http://api.dribbble.com/shots/%@/comments?per_page=30", self.shotId];
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *dict = responseObject;
-        self.title = [dict objectForKey:@"title"];
-        [self.shotView setImageWithURL:[NSURL URLWithString:[dict objectForKey:@"image_url"]]
-                      placeholderImage:self.placeholderImage];
-        
+        NSLog(@"%@", dict);
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -58,6 +55,8 @@
 
     self.shotView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 240)];
     [self.shotView setImage: self.placeholderImage];
+    [self.shotView setImageWithURL:self.imageURL
+                  placeholderImage:self.placeholderImage];
     [self.scrollView addSubview:self.shotView];
 }
 
