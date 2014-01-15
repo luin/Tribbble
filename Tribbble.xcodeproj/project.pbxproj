@@ -24,7 +24,7 @@
 		2F898ADB1886A4B500E9E8F1 /* TRIShotDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898ADA1886A4B500E9E8F1 /* TRIShotDetailViewController.m */; };
 		2F898AEA1886B1B900E9E8F1 /* debuts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F898AE51886B1B900E9E8F1 /* debuts@2x.png */; };
 		2F898AEB1886B1B900E9E8F1 /* everyone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F898AE61886B1B900E9E8F1 /* everyone@2x.png */; };
-		2F898AEC1886B1B900E9E8F1 /* feeds@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F898AE71886B1B900E9E8F1 /* feeds@2x.png */; };
+		2F898AEC1886B1B900E9E8F1 /* following@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F898AE71886B1B900E9E8F1 /* following@2x.png */; };
 		2F898AED1886B1B900E9E8F1 /* popular@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F898AE81886B1B900E9E8F1 /* popular@2x.png */; };
 		2F898AEE1886B1B900E9E8F1 /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F898AE91886B1B900E9E8F1 /* setting@2x.png */; };
 		2F898B011886BF3200E9E8F1 /* TRISettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898B001886BF3200E9E8F1 /* TRISettingTableViewController.m */; };
@@ -68,7 +68,7 @@
 		2F898ADA1886A4B500E9E8F1 /* TRIShotDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRIShotDetailViewController.m; path = Controllers/TRIShotDetailViewController.m; sourceTree = "<group>"; };
 		2F898AE51886B1B900E9E8F1 /* debuts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "debuts@2x.png"; sourceTree = "<group>"; };
 		2F898AE61886B1B900E9E8F1 /* everyone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "everyone@2x.png"; sourceTree = "<group>"; };
-		2F898AE71886B1B900E9E8F1 /* feeds@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feeds@2x.png"; sourceTree = "<group>"; };
+		2F898AE71886B1B900E9E8F1 /* following@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "following@2x.png"; sourceTree = "<group>"; };
 		2F898AE81886B1B900E9E8F1 /* popular@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popular@2x.png"; sourceTree = "<group>"; };
 		2F898AE91886B1B900E9E8F1 /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
 		2F898AFF1886BF3200E9E8F1 /* TRISettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRISettingTableViewController.h; path = Controllers/TRISettingTableViewController.h; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 			children = (
 				2F898AE51886B1B900E9E8F1 /* debuts@2x.png */,
 				2F898AE61886B1B900E9E8F1 /* everyone@2x.png */,
-				2F898AE71886B1B900E9E8F1 /* feeds@2x.png */,
+				2F898AE71886B1B900E9E8F1 /* following@2x.png */,
 				2F898AE81886B1B900E9E8F1 /* popular@2x.png */,
 				2F898AE91886B1B900E9E8F1 /* setting@2x.png */,
 			);
@@ -303,7 +303,7 @@
 				2F898AED1886B1B900E9E8F1 /* popular@2x.png in Resources */,
 				2F6B4CD718869DD9000D8591 /* Images.xcassets in Resources */,
 				2F898AEA1886B1B900E9E8F1 /* debuts@2x.png in Resources */,
-				2F898AEC1886B1B900E9E8F1 /* feeds@2x.png in Resources */,
+				2F898AEC1886B1B900E9E8F1 /* following@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

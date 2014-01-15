@@ -25,7 +25,7 @@
                                            [self createTabWithClass:[TRIShotsViewController class]
                                                               title:@"popular"],
                                            [self createTabWithClass:[TRIFeedsTableViewController class]
-                                                              title:@"feeds"],
+                                                              title:@"following"],
                                            [self createTabWithClass:[TRIShotsViewController class]
                                                               title:@"everyone"],
                                            [self createTabWithClass:[TRISettingTableViewController class]
