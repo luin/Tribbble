@@ -125,7 +125,6 @@
         cell = [[TRIShotsTableViewCell alloc] init];
     }
     
-    NSLog(@"%@", [self.shots objectAtIndex:indexPath.row]);
     cell.viewsLabel.text = [NSString stringWithFormat:@"%@ views", [[self.shots objectAtIndex:indexPath.row] objectForKey:@"views_count"]];
     cell.likesLabel.text = [NSString stringWithFormat:@"%@ likes", [[self.shots objectAtIndex:indexPath.row] objectForKey:@"likes_count"]];
     cell.commentsLabel.text = [NSString stringWithFormat:@"%@ comments", [[self.shots objectAtIndex:indexPath.row] objectForKey:@"comments_count"]];

@@ -30,6 +30,7 @@
 		2F898B011886BF3200E9E8F1 /* TRISettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898B001886BF3200E9E8F1 /* TRISettingTableViewController.m */; };
 		2F898B041886C2B400E9E8F1 /* TRIFeedsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898B031886C2B400E9E8F1 /* TRIFeedsTableViewController.m */; };
 		2F898B071886C3CC00E9E8F1 /* TRIShotsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898B061886C3CC00E9E8F1 /* TRIShotsTableViewCell.m */; };
+		2FB8ACA71886E6E700646C99 /* TRICommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8ACA61886E6E700646C99 /* TRICommentTableViewCell.m */; };
 		7C6E7550825C47C88BFD08C2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA7808F72FF456ABDAF6B8A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,8 @@
 		2F898B031886C2B400E9E8F1 /* TRIFeedsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRIFeedsTableViewController.m; path = Controllers/TRIFeedsTableViewController.m; sourceTree = "<group>"; };
 		2F898B051886C3CC00E9E8F1 /* TRIShotsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRIShotsTableViewCell.h; path = Views/TRIShotsTableViewCell.h; sourceTree = "<group>"; };
 		2F898B061886C3CC00E9E8F1 /* TRIShotsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRIShotsTableViewCell.m; path = Views/TRIShotsTableViewCell.m; sourceTree = "<group>"; };
+		2FB8ACA51886E6E700646C99 /* TRICommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRICommentTableViewCell.h; path = Views/TRICommentTableViewCell.h; sourceTree = "<group>"; };
+		2FB8ACA61886E6E700646C99 /* TRICommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRICommentTableViewCell.m; path = Views/TRICommentTableViewCell.m; sourceTree = "<group>"; };
 		5020FE1AF71743C6A053A494 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8CA7808F72FF456ABDAF6B8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -203,6 +206,8 @@
 				2F898AD61886A32600E9E8F1 /* TRIShotsCollectionViewCell.m */,
 				2F898B051886C3CC00E9E8F1 /* TRIShotsTableViewCell.h */,
 				2F898B061886C3CC00E9E8F1 /* TRIShotsTableViewCell.m */,
+				2FB8ACA51886E6E700646C99 /* TRICommentTableViewCell.h */,
+				2FB8ACA61886E6E700646C99 /* TRICommentTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				2F898B041886C2B400E9E8F1 /* TRIFeedsTableViewController.m in Sources */,
 				2F898B071886C3CC00E9E8F1 /* TRIShotsTableViewCell.m in Sources */,
 				2F6B4CD118869DD9000D8591 /* main.m in Sources */,
+				2FB8ACA71886E6E700646C99 /* TRICommentTableViewCell.m in Sources */,
 				2F898B011886BF3200E9E8F1 /* TRISettingTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

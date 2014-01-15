@@ -7,13 +7,16 @@
 //
 
 #import "TRIShotDetailViewController.h"
+#import "../Views/TRICommentTableViewCell.h"
 #import <AFNetworking/AFNetworking.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface TRIShotDetailViewController ()
+@interface TRIShotDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, retain) UIImageView *shotView;
 @property (nonatomic, retain) UIImageView *shotPlaceholderView;
 @property (nonatomic, retain) UIScrollView *scrollView;
+@property (nonatomic, retain) UITableView *commentView;
+@property (nonatomic, retain) NSArray *comments;
 @end
 
 @implementation TRIShotDetailViewController
@@ -40,7 +43,16 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *dict = responseObject;
-        NSLog(@"%@", dict);
+        self.comments = [dict objectForKey:@"comments"];
+        self.commentView = [[UITableView alloc] initWithFrame:CGRectMake(15, 255, 290, 60 * self.comments.count)];
+        self.commentView.dataSource = self;
+        self.commentView.delegate = self;
+        self.commentView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        self.commentView.alwaysBounceVertical = NO;
+        [self.scrollView addSubview:self.commentView];
+        self.scrollView.contentSize = CGSizeMake(320, self.commentView.frame.size.height + self.commentView.frame.origin.y);
+        [self.commentView reloadData];
+        NSLog(@"%@", self.comments);
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -65,6 +77,28 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.comments.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TRICommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell"];
+    if (cell == nil) {
+        cell = [[TRICommentTableViewCell alloc] init];
+    }
+    [cell updateComment:[self.comments objectAtIndex:indexPath.row]];
+    return cell;
+}
+
 
 /*
  #pragma mark - Navigation
