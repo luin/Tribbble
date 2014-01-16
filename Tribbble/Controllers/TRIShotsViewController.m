@@ -53,8 +53,8 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:[NSString stringWithFormat:@"http://api.dribbble.com/shots/%@?per_page=30&page=%d", [self.title lowercaseString], (int)self.currentPage] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *dict = responseObject;
-        NSLog(@"%@", [dict objectForKey:@"shots"]);
         [self.shots addObjectsFromArray:[dict objectForKey:@"shots"]];
+        NSLog(@"URL== %@", [[self.shots objectAtIndex:0] objectForKey:@"image_teaser_url"]);
         [self.shotsView reloadData];
         self.isLoading = false;
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
@@ -111,13 +111,32 @@
     return self.shots.count;
 }
 
+-(void)fadeIn:(UIView*)viewToFadeIn
+ withDuration:(NSTimeInterval)duration
+      andWait:(NSTimeInterval)wait
+{
+    viewToFadeIn.alpha = 0;
+    [UIView beginAnimations: @"Fade In" context:nil];
+    
+    // wait for time before begin
+    [UIView setAnimationDelay:wait];
+    
+    // druation of animation
+    [UIView setAnimationDuration:duration];
+    viewToFadeIn.alpha = 1;
+    [UIView commitAnimations];
+    
+}
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"ShotCell";
     TRIShotsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
     [cell.shotImage setImageWithURL:[NSURL URLWithString:[[self.shots objectAtIndex:indexPath.row]
-                                                          objectForKey:@"image_teaser_url"]]];
+                                                          objectForKey:@"image_teaser_url"]]
+                   placeholderImage:[UIImage imageNamed:@"placeholder"]
+                            options:SDWebImageRetryFailed];
     
     if (indexPath.row == self.shots.count - 1 - 18) {
         [self loadMoreShots];

@@ -31,6 +31,7 @@
 		2F898B041886C2B400E9E8F1 /* TRIFeedsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898B031886C2B400E9E8F1 /* TRIFeedsTableViewController.m */; };
 		2F898B071886C3CC00E9E8F1 /* TRIShotsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F898B061886C3CC00E9E8F1 /* TRIShotsTableViewCell.m */; };
 		2FB8ACA71886E6E700646C99 /* TRICommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8ACA61886E6E700646C99 /* TRICommentTableViewCell.m */; };
+		2FB8ACA91888260800646C99 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8ACA81888260800646C99 /* placeholder@2x.png */; };
 		7C6E7550825C47C88BFD08C2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA7808F72FF456ABDAF6B8A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		2F898B061886C3CC00E9E8F1 /* TRIShotsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRIShotsTableViewCell.m; path = Views/TRIShotsTableViewCell.m; sourceTree = "<group>"; };
 		2FB8ACA51886E6E700646C99 /* TRICommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRICommentTableViewCell.h; path = Views/TRICommentTableViewCell.h; sourceTree = "<group>"; };
 		2FB8ACA61886E6E700646C99 /* TRICommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRICommentTableViewCell.m; path = Views/TRICommentTableViewCell.m; sourceTree = "<group>"; };
+		2FB8ACA81888260800646C99 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
 		5020FE1AF71743C6A053A494 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8CA7808F72FF456ABDAF6B8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				2F898AE51886B1B900E9E8F1 /* debuts@2x.png */,
+				2FB8ACA81888260800646C99 /* placeholder@2x.png */,
 				2F898AE61886B1B900E9E8F1 /* everyone@2x.png */,
 				2F898AE71886B1B900E9E8F1 /* following@2x.png */,
 				2F898AE81886B1B900E9E8F1 /* popular@2x.png */,
@@ -307,6 +310,7 @@
 				2F898AEE1886B1B900E9E8F1 /* setting@2x.png in Resources */,
 				2F898AED1886B1B900E9E8F1 /* popular@2x.png in Resources */,
 				2F6B4CD718869DD9000D8591 /* Images.xcassets in Resources */,
+				2FB8ACA91888260800646C99 /* placeholder@2x.png in Resources */,
 				2F898AEA1886B1B900E9E8F1 /* debuts@2x.png in Resources */,
 				2F898AEC1886B1B900E9E8F1 /* following@2x.png in Resources */,
 			);

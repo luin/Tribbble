@@ -17,16 +17,25 @@ PODS:
   - AFNetworking/Serialization (2.0.3)
   - AFNetworking/UIKit (2.0.3):
     - AFNetworking/NSURLConnection
+  - DACircularProgress (2.1.0)
+  - FXBlurView (1.5.1)
   - SDWebImage (3.5.2):
     - SDWebImage/Core
   - SDWebImage/Core (3.5.2)
+  - TimeScroller (2.0.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - DACircularProgress (~> 2.1.0)
+  - FXBlurView (~> 1.5.1)
   - SDWebImage (~> 3.5.2)
+  - TimeScroller (~> 2.0.1)
 
 SPEC CHECKSUMS:
   AFNetworking: e499052cbf3d743e9bb727bb37adb9dc2547ba15
+  DACircularProgress: 8c8f20c8dffdd647fbf570ddecbc2b1b59da5888
+  FXBlurView: 073fdfdf3fa8d715130d2c1392ba1545551776f1
   SDWebImage: fe7ce01ae4e0a884d168f59c9dd82d35baf8429e
+  TimeScroller: 30d526c2bc01a738816468f254ba72368cc7a941
 
 COCOAPODS: 0.29.0

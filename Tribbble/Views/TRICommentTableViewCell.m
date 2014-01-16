@@ -22,7 +22,7 @@
 
 - (void)updateComment:(NSDictionary *)comment
 {
-    UIImageView *avatarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 48, 48)];
+    UIImageView *avatarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 24, 24)];
     [avatarView setImageWithURL:[NSURL URLWithString:[[comment objectForKey:@"player"]objectForKey:@"avatar_url"]]];
     [self.contentView addSubview:avatarView];
 

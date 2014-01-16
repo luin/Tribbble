@@ -10,6 +10,8 @@
 #import "../Views/TRICommentTableViewCell.h"
 #import <AFNetworking/AFNetworking.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <FXBlurView/FXBlurView.h>
+#import <DACircularProgress/DACircularProgressView.h>
 
 @interface TRIShotDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, retain) UIImageView *shotView;
@@ -52,7 +54,6 @@
         [self.scrollView addSubview:self.commentView];
         self.scrollView.contentSize = CGSizeMake(320, self.commentView.frame.size.height + self.commentView.frame.origin.y);
         [self.commentView reloadData];
-        NSLog(@"%@", self.comments);
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -66,9 +67,31 @@
     [self.view addSubview:self.scrollView];
 
     self.shotView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 240)];
-    [self.shotView setImage: self.placeholderImage];
-    [self.shotView setImageWithURL:self.imageURL
-                  placeholderImage:self.placeholderImage];
+    
+    [self.shotView setImage:[self.placeholderImage blurredImageWithRadius:8.0f iterations:2 tintColor:[UIColor clearColor]]];
+
+    DACircularProgressView *progressView = [[DACircularProgressView alloc] initWithFrame:CGRectMake(140.0f, 100.0f, 40.0f, 40.0f)];
+    progressView.roundedCorners = YES;
+    progressView.trackTintColor = [UIColor clearColor];
+    [self.shotView addSubview:progressView];
+    
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    [manager downloadWithURL:self.imageURL
+                     options:0
+                    progress:^(NSUInteger receivedSize, long long expectedSize)
+     {
+         [progressView setProgress:(CGFloat)receivedSize/expectedSize];
+     }
+                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished)
+     {
+         if (image)
+         {
+             [self.shotView setImage:image];
+             [progressView removeFromSuperview];
+         }
+     }];
+
+    
     [self.scrollView addSubview:self.shotView];
 }
 
