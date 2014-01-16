@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TRISettingTableViewController : UITableViewController
+@interface TRISettingViewController : UIViewController
 
 @end

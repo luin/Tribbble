@@ -9,7 +9,7 @@
 #import "TRIAppDelegate.h"
 #import "Controllers/TRIShotsViewController.h"
 #import "Controllers/TRIFeedsTableViewController.h"
-#import "Controllers/TRISettingTableViewController.h"
+#import "Controllers/TRISettingViewController.h"
 
 @implementation TRIAppDelegate
 
@@ -28,7 +28,7 @@
                                                               title:@"following"],
                                            [self createTabWithClass:[TRIShotsViewController class]
                                                               title:@"everyone"],
-                                           [self createTabWithClass:[TRISettingTableViewController class]
+                                           [self createTabWithClass:[TRISettingViewController class]
                                                               title:@"setting"]
                                            ]];
     [tabBarController.view setTintColor:[UIColor colorWithRed:0.918 green:0.298 blue:0.537 alpha:1.0]];
