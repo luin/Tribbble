@@ -11,11 +11,15 @@
 #import "TRIShotDetailViewController.h"
 #import <AFNetworking/AFNetworking.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <TimeScroller/ACTimeScroller.h>
 
-@interface TRIFeedsTableViewController ()
+NSString * const TRITableViewCellIdentifier = @"TRITableViewCellIdentifier";
+
+@interface TRIFeedsTableViewController () <ACTimeScrollerDelegate>
 @property (nonatomic, retain) NSMutableArray *shots;
 @property (nonatomic) NSInteger currentPage;
 @property (nonatomic) BOOL isLoading;
+@property (nonatomic, retain) ACTimeScroller *timeScroller;
 @end
 
 @implementation TRIFeedsTableViewController
@@ -75,6 +79,8 @@
     [self.view setBackgroundColor:[UIColor colorWithRed:0.922 green:0.922 blue:0.922 alpha:1.0]];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    self.timeScroller = [[ACTimeScroller alloc] initWithDelegate:self];
+    
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(handleRefresh:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:refreshControl];
@@ -90,6 +96,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - ACTimeScrollerDelegate Methods
+
+- (UITableView *)tableViewForTimeScroller:(ACTimeScroller *)timeScroller
+{
+    return self.tableView;
+}
+
+- (NSDate *)timeScroller:(ACTimeScroller *)timeScroller dateForCell:(UITableViewCell *)cell
+{
+    NSIndexPath *indexPath = [[self tableView] indexPathForCell:cell];
+    NSString *date = [[self.shots objectAtIndex:indexPath.row] objectForKey:@"created_at"];
+    NSDateFormatter *dateFormattero = [[NSDateFormatter alloc] init];
+    [dateFormattero setDateFormat:@"yyyy/MM/dd HH:mm:ss Z"];
+    return [dateFormattero dateFromString:date];
+}
+
 
 #pragma mark - Table view data source
 
@@ -120,7 +143,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TRIShotsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedCell"];
+    TRIShotsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TRITableViewCellIdentifier];
     if (cell == nil) {
         cell = [[TRIShotsTableViewCell alloc] init];
     }
@@ -140,53 +163,22 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+#pragma mark - UIScrollViewDelegate Methods
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    [_timeScroller scrollViewWillBeginDragging];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    [_timeScroller scrollViewDidScroll];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+    [_timeScroller scrollViewDidEndDecelerating];
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
