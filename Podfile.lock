@@ -19,6 +19,7 @@ PODS:
     - AFNetworking/NSURLConnection
   - DACircularProgress (2.1.0)
   - FXBlurView (1.5.1)
+  - NJKScrollFullScreen (0.2)
   - REFormattedNumberField (1.1.1)
   - RETableViewManager (1.5.7):
     - REFormattedNumberField (~> 1.1.1)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - DACircularProgress (~> 2.1.0)
   - FXBlurView (~> 1.5.1)
+  - NJKScrollFullScreen
   - RETableViewManager (~> 1.5.7)
   - SDWebImage (~> 3.5.2)
   - TimeScroller (~> 2.0.1)
@@ -41,6 +43,7 @@ SPEC CHECKSUMS:
   AFNetworking: e499052cbf3d743e9bb727bb37adb9dc2547ba15
   DACircularProgress: 8c8f20c8dffdd647fbf570ddecbc2b1b59da5888
   FXBlurView: 073fdfdf3fa8d715130d2c1392ba1545551776f1
+  NJKScrollFullScreen: e6afddd7f9c33d43126e3b547b39cd99fa2ee0a3
   REFormattedNumberField: 53db6b5097b02f608999b7c95ec8ccda95be93be
   RETableViewManager: 1a416f4d862934c8d998827c221158d596da243c
   REValidation: 02160035110a63af1bf6ad1b8791837b3fa13584

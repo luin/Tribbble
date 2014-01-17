@@ -5,3 +5,5 @@ pod 'TimeScroller', '~> 2.0.1'
 pod 'FXBlurView', '~> 1.5.1'
 pod 'DACircularProgress', '~> 2.1.0'
 pod 'RETableViewManager', '~> 1.5.7'
+pod 'NJKScrollFullScreen'
+

@@ -11,12 +11,15 @@
 #import "TRIShotDetailViewController.h"
 #import <AFNetworking/AFNetworking.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <NJKScrollFullScreen/NJKScrollFullScreen.h>
+#import "UIViewController+NJKFullScreenSupport.h"
 
-@interface TRIShotsViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface TRIShotsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, NJKScrollFullscreenDelegate>
 @property (nonatomic, retain) UICollectionView *shotsView;
 @property (nonatomic, retain) NSMutableArray *shots;
 @property (nonatomic) NSInteger currentPage;
 @property (nonatomic) BOOL isLoading;
+@property (nonatomic, retain) NJKScrollFullScreen *scrollProxy;
 @end
 
 @implementation TRIShotsViewController
@@ -39,6 +42,11 @@
     self.currentPage = 0;
     self.isLoading = false;
 	[self loadMoreShots];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self showNavigationBar:YES];
 }
 
 - (void)loadMoreShots
@@ -79,6 +87,12 @@
     [self.shotsView setBackgroundColor: [UIColor whiteColor]];
     self.shotsView.delegate = self;
     self.shotsView.dataSource = self;
+    
+    self.scrollProxy = [[NJKScrollFullScreen alloc] initWithForwardTarget:self];
+    self.shotsView.delegate = (id)_scrollProxy;
+    self.scrollProxy.delegate = self;
+    
+
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(handleRefresh:) forControlEvents:UIControlEventValueChanged];
@@ -165,6 +179,26 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+
+- (void)scrollFullScreen:(NJKScrollFullScreen *)proxy scrollViewDidScrollUp:(CGFloat)deltaY
+{
+    [self moveNavigtionBar:deltaY animated:YES];
+}
+
+- (void)scrollFullScreen:(NJKScrollFullScreen *)proxy scrollViewDidScrollDown:(CGFloat)deltaY
+{
+    [self moveNavigtionBar:deltaY animated:YES];
+}
+
+- (void)scrollFullScreenScrollViewDidEndDraggingScrollUp:(NJKScrollFullScreen *)proxy
+{
+    [self hideNavigationBar:YES];
+}
+
+- (void)scrollFullScreenScrollViewDidEndDraggingScrollDown:(NJKScrollFullScreen *)proxy
+{
+    [self showNavigationBar:YES];
+}
 
 /*
 #pragma mark - Navigation

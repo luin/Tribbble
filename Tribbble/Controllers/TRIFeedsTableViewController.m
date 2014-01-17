@@ -12,14 +12,17 @@
 #import <AFNetworking/AFNetworking.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <TimeScroller/ACTimeScroller.h>
+#import <NJKScrollFullScreen/NJKScrollFullScreen.h>
+#import "UIViewController+NJKFullScreenSupport.h"
 
 NSString * const TRITableViewCellIdentifier = @"TRITableViewCellIdentifier";
 
-@interface TRIFeedsTableViewController () <ACTimeScrollerDelegate>
+@interface TRIFeedsTableViewController () <ACTimeScrollerDelegate,NJKScrollFullscreenDelegate>
 @property (nonatomic, retain) NSMutableArray *shots;
 @property (nonatomic) NSInteger currentPage;
 @property (nonatomic) BOOL isLoading;
 @property (nonatomic, retain) ACTimeScroller *timeScroller;
+@property (nonatomic, retain) NJKScrollFullScreen *scrollProxy;
 @end
 
 @implementation TRIFeedsTableViewController
@@ -44,6 +47,12 @@ NSString * const TRITableViewCellIdentifier = @"TRITableViewCellIdentifier";
     self.isLoading = false;
 	[self loadMoreShots];
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self showNavigationBar:YES];
+}
+
 
 - (void)loadMoreShots
 {
@@ -76,6 +85,10 @@ NSString * const TRITableViewCellIdentifier = @"TRITableViewCellIdentifier";
 
 - (void) prepareView
 {
+    self.scrollProxy = [[NJKScrollFullScreen alloc] initWithForwardTarget:self];
+    self.tableView.delegate = (id)_scrollProxy;
+    self.scrollProxy.delegate = self;
+
     [self.view setBackgroundColor:[UIColor colorWithRed:0.922 green:0.922 blue:0.922 alpha:1.0]];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
@@ -179,6 +192,28 @@ NSString * const TRITableViewCellIdentifier = @"TRITableViewCellIdentifier";
 {
     [_timeScroller scrollViewDidEndDecelerating];
 }
+
+
+- (void)scrollFullScreen:(NJKScrollFullScreen *)proxy scrollViewDidScrollUp:(CGFloat)deltaY
+{
+    [self moveNavigtionBar:deltaY animated:YES];
+}
+
+- (void)scrollFullScreen:(NJKScrollFullScreen *)proxy scrollViewDidScrollDown:(CGFloat)deltaY
+{
+    [self moveNavigtionBar:deltaY animated:YES];
+}
+
+- (void)scrollFullScreenScrollViewDidEndDraggingScrollUp:(NJKScrollFullScreen *)proxy
+{
+    [self hideNavigationBar:YES];
+}
+
+- (void)scrollFullScreenScrollViewDidEndDraggingScrollDown:(NJKScrollFullScreen *)proxy
+{
+    [self showNavigationBar:YES];
+}
+
 
 
 @end
