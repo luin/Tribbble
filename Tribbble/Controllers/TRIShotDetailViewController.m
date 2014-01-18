@@ -12,6 +12,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <FXBlurView/FXBlurView.h>
 #import <DACircularProgress/DACircularProgressView.h>
+#import "UIViewController+NJKFullScreenSupport.h"
 
 @interface TRIShotDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, retain) UIImageView *shotView;
@@ -35,7 +36,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self showNavigationBar:YES];
+
     self.title = self.placeholderTitle;
     [self prepareView];
     [self.view setBackgroundColor:[UIColor whiteColor]];
